@@ -45,6 +45,8 @@ exports.updateTour = async (req, res, next) => {
       { _id: id },
       {
         title: req.body.title,
+        duration: req.body.duration,
+        groupSize: req.body.groupSize,
       },
       {
         new: true,
