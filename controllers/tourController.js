@@ -65,9 +65,11 @@ exports.updateTour = async (req, res, next) => {
 
 exports.createTour = async (req, res, next) => {
   try {
-    const { title } = req.body;
+    const { title, duration, groupSize } = req.body;
     const tour = await Tours.create({
       title,
+      duration,
+      groupSize,
     });
 
     res.send({
